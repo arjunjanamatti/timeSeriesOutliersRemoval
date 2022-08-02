@@ -1,12 +1,3 @@
-from scipy import stats
-import numpy as np, random
+import numpy as np, pandas as pd
 
-
-print(stats.iqr([1,2,3,4,5],rng=(10,90)))
-
-check_list = [random.randint(1,50) for i in range(10)]
-print(check_list)
-print(sorted(check_list))
-print(np.quantile(check_list,q=0.1))
-
-print(np.quantile(check_list,q=0.9))
+sample_data = pd.read_csv('C:/Users/SESA627676/Downloads/sample_timeseries_data.txt', sep=',', index_col=0, parse_dates=True, squeeze=True)
