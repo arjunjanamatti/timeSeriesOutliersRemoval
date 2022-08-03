@@ -18,12 +18,8 @@ sample_data = pd.read_csv("C:/Users/SESA627676/Box/School of DataScience - Inter
 data_series = list(sample_data['#Passengers'])
 decompose_ts_add = seasonal_decompose(data_series, model = "additive", period = 12, extrapolate_trend='freq')
 trend = decompose_ts_add.trend
-# print(trend)
 seasonal = decompose_ts_add.seasonal
-# print()
-# print(seasonal)
 resid = decompose_ts_add.resid
-# print()
 print(resid)
 q1_resid = np.percentile(resid, 25)
 q3_resid = np.percentile(resid, 75)
